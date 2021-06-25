@@ -11,13 +11,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // ignore: close_sinks
   LoginBloc _loginBloc;
   @override
   void initState() {
-    _loginBloc = LoginBloc();
     super.initState();
+    _loginBloc = BlocProvider.of<LoginBloc>(context);
   }
+
 
   @override
   Widget build(BuildContext context) {
